@@ -32,6 +32,14 @@ body, html{
 	flex-direction: row;
 }
 
+.pray_type_icons{
+	height: 1.5em;
+	width: 1.5em;
+}
+.flex_column {
+	display: flex;
+	flex-direction: column;
+}
 .flex_display {
 	display: flex;
 }
