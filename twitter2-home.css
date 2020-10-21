@@ -1,45 +1,28 @@
-body, html{
-	height: 100%;
-	margin: 0;
+.css-1dbjc4n {
+    -moz-box-align: stretch;
+    -moz-box-direction: normal;
+    -moz-box-orient: vertical;
+    align-items: stretch;
+    border: 0px solid black;
+    box-sizing: border-box;
+    display: flex;
+    flex-basis: auto;
+    flex-direction: column;
+    flex-shrink: 0;
+    margin: 0px;
+    min-height: 0px;
+    min-width: 0px;
+    padding: 0px;
+    position: relative;
+    z-index: 0;
 }
 
-#left {
-	width: 275px;
+.r-eqz5dr {
+    -moz-box-direction: normal;
+    -moz-box-orient: vertical;
+    flex-direction: column;
 }
-.borderbox {
-	box-sizing: border-box;
-}
-
-.blockdisplay {
-	display: block;
-}
-
-.inlinedisplay{
-	display: inline;
-}
-
-.icon_color {
-	color: rgb(29, 161, 242);
-	fill: currentcolor;
-}
-
-#home_icon svg g path {
-	d: "M22.58 7.35L12.475 1.897c-.297-.16-.654-.16-.95 0L1.425 7.35c-.486.264-.667.87-.405 1.356.18.335.525.525.88.525.16 0 .324-.038.475-.12l.734-.396 1.59 11.25c.216 1.214 1.31 2.062 2.66 2.062h9.282c1.35 0 2.444-.848 2.662-2.088l1.588-11.225.737.398c.485.263 1.092.082 1.354-.404.263-.486.08-1.093-.404-1.355zM12 15.435c-1.795 0-3.25-1.455-3.25-3.25s1.455-3.25 3.25-3.25 3.25 1.455 3.25 3.25-1.455 3.25-3.25 3.25z";
-}
-
-.flex_row {
-	display: flex;
-	flex-direction: row;
-}
-
-.pray_type_icons{
-	height: 1.5em;
-	width: 1.5em;
-}
-.flex_column {
-	display: flex;
-	flex-direction: column;
-}
-.flex_display {
-	display: flex;
+.r-1habvwh {
+    -moz-box-align: start;
+    align-items: flex-start;
 }

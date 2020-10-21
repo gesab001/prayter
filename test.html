@@ -1,0 +1,121 @@
+  <script type='text/javascript' src='svg.js'></script>
+<style>
+
+a {
+ text-decoration: none;
+ color:inherit;
+ transition-property: color;
+}
+
+a .button {
+  transition-property: background-color;
+  transition-duration: 0.2s;
+  border-radius: 9999px;
+  padding:10px;
+}
+
+.text-button{
+  
+  margin-left: 20px;
+  margin-right; 15px;
+  font-weight: bold;
+  font-size: 19px; 
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif;
+}
+a:hover{
+  color: blue;
+}
+a:hover .button {
+  background-color: rgba(29,161,242, 0.1);
+}
+
+svg{
+ color:inherit; fill:currentColor; height:1.75rem;
+}
+</style>
+<nav>
+
+
+<a id="home" href="#" style="display:flex" onclick="selected(this) ">
+<div  class="button" style="display:flex;">
+
+<div class="svg-container">
+
+</div>
+<div class="text-button">Home</div>
+</div>
+</a>
+
+<a id="explore" href="#" style="display:flex"  onclick="selected(this) ">
+<div  class="button" style="display:flex;">
+
+<div class="svg-container">
+
+</div>
+<div class="text-button">Explore</div>
+</div>
+</a>
+</nav>
+
+<script>
+svg = { "explore":{"default": [{"path": "M20.585 9.468c.66 0 1.2-.538 1.2-1.2 0-.662-.54-1.2-1.2-1.2h-3.22l.31-3.547c.027-.318-.07-.63-.277-.875-.206-.245-.495-.396-.822-.425-.65-.035-1.235.432-1.293 1.093l-.326 3.754H9.9l.308-3.545c.06-.658-.43-1.242-1.097-1.302-.665-.05-1.235.43-1.293 1.092l-.325 3.754h-3.33c-.663 0-1.2.538-1.2 1.2 0 .662.538 1.2 1.2 1.2h3.122l-.44 5.064H3.416c-.662 0-1.2.54-1.2 1.2s.538 1.202 1.2 1.202h3.22l-.31 3.548c-.057.657.432 1.24 1.09 1.3l.106.005c.626 0 1.14-.472 1.195-1.098l.327-3.753H14.1l-.308 3.544c-.06.658.43 1.242 1.09 1.302l.106.005c.617 0 1.142-.482 1.195-1.098l.325-3.753h3.33c.66 0 1.2-.54 1.2-1.2s-.54-1.202-1.2-1.202h-3.122l.44-5.064h3.43zm-5.838 0l-.44 5.063H9.253l.44-5.062h5.055z"}], "pressed": [{"path": "M20.585 9.468c.66 0 1.2-.538 1.2-1.2 0-.662-.54-1.2-1.2-1.2h-3.22l.31-3.547c.027-.318-.07-.63-.277-.875-.206-.245-.495-.396-.822-.425-.65-.035-1.235.432-1.293 1.093l-.326 3.754H9.9l.308-3.545c.06-.658-.43-1.242-1.097-1.302-.665-.05-1.235.43-1.293 1.092l-.325 3.754h-3.33c-.663 0-1.2.538-1.2 1.2 0 .662.538 1.2 1.2 1.2h3.122l-.44 5.064H3.416c-.662 0-1.2.54-1.2 1.2s.538 1.202 1.2 1.202h3.22l-.31 3.548c-.057.657.432 1.24 1.09 1.3l.106.005c.626 0 1.14-.472 1.195-1.098l.327-3.753H14.1l-.308 3.544c-.06.658.43 1.242 1.09 1.302l.106.005c.617 0 1.142-.482 1.195-1.098l.325-3.753h3.33c.66 0 1.2-.54 1.2-1.2s-.54-1.202-1.2-1.202h-3.122l.44-5.064h3.43zm-5.838 0l-.44 5.063H9.253l.44-5.062h5.055z"}]} , "home":{"default": [{"path": "M22.46 7.57L12.357 2.115c-.223-.12-.49-.12-.713 0L1.543 7.57c-.364.197-.5.652-.303 1.017.135.25.394.393.66.393.12 0 .243-.03.356-.09l.815-.44L4.7 19.963c.214 1.215 1.308 2.062 2.658 2.062h9.282c1.352 0 2.445-.848 2.663-2.087l1.626-11.49.818.442c.364.193.82.06 1.017-.304.196-.363.06-.818-.304-1.016zm-4.638 12.133c-.107.606-.703.822-1.18.822H7.36c-.48 0-1.075-.216-1.178-.798L4.48 7.69 12 3.628l7.522 4.06-1.7 12.015z"}, {"path": "M8.22 12.184c0 2.084 1.695 3.78 3.78 3.78s3.78-1.696 3.78-3.78-1.695-3.78-3.78-3.78-3.78 1.696-3.78 3.78zm6.06 0c0 1.258-1.022 2.28-2.28 2.28s-2.28-1.022-2.28-2.28 1.022-2.28 2.28-2.28 2.28 1.022 2.28 2.28z"}], "pressed": [{"path": "M22.58 7.35L12.475 1.897c-.297-.16-.654-.16-.95 0L1.425 7.35c-.486.264-.667.87-.405 1.356.18.335.525.525.88.525.16 0 .324-.038.475-.12l.734-.396 1.59 11.25c.216 1.214 1.31 2.062 2.66 2.062h9.282c1.35 0 2.444-.848 2.662-2.088l1.588-11.225.737.398c.485.263 1.092.082 1.354-.404.263-.486.08-1.093-.404-1.355zM12 15.435c-1.795 0-3.25-1.455-3.25-3.25s1.455-3.25 3.25-3.25 3.25 1.455 3.25 3.25-1.455 3.25-3.25 3.25z"}]}};
+x = svg.home.pressed[0].path;
+
+var items = document.getElementsByClassName("button");
+var currentSelected = "explore";	
+function selected(item){
+  
+  var pathname = item.id;
+  
+  this.clear(currentSelected);
+  var button = item.getElementsByClassName("button")[0];
+  button.style.color = "blue";
+  var svgContainer = button.getElementsByClassName("svg-container")[0];
+  var svg = createSVG(pathname, "pressed");
+  svgContainer.removeChild(svgContainer.firstChild);
+  svgContainer.appendChild(svg);
+  currentSelected = pathname;
+  alert(currentSelected);
+  
+}
+
+function createSVG(pathname, state){
+     var xmlns = "http://www.w3.org/2000/svg";
+	 var svgElem = document.createElementNS(xmlns, "svg");
+	 svgElem.setAttributeNS(null, "viewBox", "0 0 24 24");
+	 var g = document.createElementNS(xmlns, "g");
+     svgElem.appendChild(g);
+	 var paths = svg[pathname][state];
+	 
+	 for (var x=0; x<paths.length; x++){
+	     var path = paths[x].path;
+		 var pathEl =  document.createElementNS(xmlns, "path");
+		 pathEl.setAttributeNS(null, "d", path);
+		 g.appendChild(pathEl);	 
+	 }
+
+	 return svgElem;
+
+}
+
+function unselect(pathname){
+  var item = document.getElementById(pathname);
+  var button = item.getElementsByClassName("button")[0];
+  button.style.color = "blue";
+  var svgContainer = button.getElementsByClassName("svg-container")[0];
+  var svg = createSVG(pathname, "default");
+  svgContainer.removeChild(svgContainer.firstChild);
+  svgContainer.appendChild(svg);
+  
+  }
+  
+function clear(svgname){
+  this.unselect(svgname);
+  for (var i=0; i<items.length; i++){
+     var item = items[i];
+	 item.style.color = "inherit";
+	 
+  }
+  
+}
+</script>
