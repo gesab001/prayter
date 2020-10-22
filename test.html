@@ -38,79 +38,12 @@ svg{
 
 }
 </style>
-</head><body>
+
+</head><body style="margin:0px">
 
 
 
-<script>
 
-
-var items = document.getElementsByClassName("button");
-var currentSelected = "explore";	
-
-initializeSVGS();
-
-function initializeSVGS(){
-   for ( pathname in svg){
-      unselect(pathname);
-   }
-   selected(document.getElementById("home"));
-}
-function selected(item){
-  
-  var pathname = item.id;
-  
-  this.clear(currentSelected);
-  var button = item.getElementsByClassName("button")[0];
-  button.style.color = "rgb(29, 161, 242)";
-  var svgContainer = button.getElementsByClassName("svg-container")[0];
-  var svg = createSVG(pathname, "pressed");
-  svgContainer.removeChild(svgContainer.firstChild);
-  svgContainer.appendChild(svg);
-  currentSelected = pathname;
-  
-}
-
-function createSVG(pathname, state){
-     var xmlns = "http://www.w3.org/2000/svg";
-	 var svgElem = document.createElementNS(xmlns, "svg");
-	 svgElem.setAttributeNS(null, "viewBox", "0 0 24 24");
-	 var g = document.createElementNS(xmlns, "g");
-     svgElem.appendChild(g);
-	 var paths = svg[pathname][state];
-	 
-	 for (var x=0; x<paths.length; x++){
-	     var path = paths[x].path;
-		 var pathEl =  document.createElementNS(xmlns, "path");
-		 pathEl.setAttributeNS(null, "d", path);
-		 g.appendChild(pathEl);	 
-	 }
-
-	 return svgElem;
-
-}
-
-function unselect(pathname){
-  var item = document.getElementById(pathname);
-  var button = item.getElementsByClassName("button")[0];
-  button.style.color = "inherit";
-  var svgContainer = button.getElementsByClassName("svg-container")[0];
-  var svg = createSVG(pathname, "default");
-  svgContainer.removeChild(svgContainer.firstChild);
-  svgContainer.appendChild(svg);
-  
-  }
-  
-function clear(svgname){
-  this.unselect(svgname);
-  for (var i=0; i<items.length; i++){
-     var item = items[i];
-	 item.style.color = "inherit";
-	 
-  }
-  
-}
-</script>
 <div style="display: flex;flex-direction: row;height: 100%;">
 <header style="display:flex; flex-direction; column; align-items:flex-end;height: 100%;flex-direction: column;">
 <div style="width: 275px;">
@@ -203,5 +136,75 @@ function clear(svgname){
 </div>
 <div>giovanni</div></div>
 </header>
-  <main style="display: flex;">main</main>
-</div></body></html>
+  <main style="display: flex;/*! flex: 1 1 0%; */flex-grow: 1;">main</main>
+</div>
+<script>
+
+
+var items = document.getElementsByClassName("button");
+var currentSelected = "explore";	
+
+initializeSVGS();
+
+function initializeSVGS(){
+   for ( pathname in svg){
+      unselect(pathname);
+   }
+   selected(document.getElementById("home"));
+}
+function selected(item){
+  
+  var pathname = item.id;
+  
+  this.clear(currentSelected);
+  var button = item.getElementsByClassName("button")[0];
+  button.style.color = "rgb(29, 161, 242)";
+  var svgContainer = button.getElementsByClassName("svg-container")[0];
+  var svg = createSVG(pathname, "pressed");
+  svgContainer.removeChild(svgContainer.firstChild);
+  svgContainer.appendChild(svg);
+  currentSelected = pathname;
+  
+}
+
+function createSVG(pathname, state){
+     var xmlns = "http://www.w3.org/2000/svg";
+	 var svgElem = document.createElementNS(xmlns, "svg");
+	 svgElem.setAttributeNS(null, "viewBox", "0 0 24 24");
+	 var g = document.createElementNS(xmlns, "g");
+     svgElem.appendChild(g);
+	 var paths = svg[pathname][state];
+	 
+	 for (var x=0; x<paths.length; x++){
+	     var path = paths[x].path;
+		 var pathEl =  document.createElementNS(xmlns, "path");
+		 pathEl.setAttributeNS(null, "d", path);
+		 g.appendChild(pathEl);	 
+	 }
+
+	 return svgElem;
+
+}
+
+function unselect(pathname){
+  var item = document.getElementById(pathname);
+  var button = item.getElementsByClassName("button")[0];
+  button.style.color = "inherit";
+  var svgContainer = button.getElementsByClassName("svg-container")[0];
+  var svg = createSVG(pathname, "default");
+  svgContainer.removeChild(svgContainer.firstChild);
+  svgContainer.appendChild(svg);
+  
+  }
+  
+function clear(svgname){
+  this.unselect(svgname);
+  for (var i=0; i<items.length; i++){
+     var item = items[i];
+	 item.style.color = "inherit";
+	 
+  }
+  
+}
+</script>
+</body></html>
